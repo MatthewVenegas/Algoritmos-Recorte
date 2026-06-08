@@ -194,7 +194,7 @@ namespace AlgoritmosDeDiscretizacion
             0,
             0});
             this.numAncho.Name = "numAncho";
-            this.numAncho.Size = new System.Drawing.Size(120, 27);
+            this.numAncho.Size = new System.Drawing.Size(89, 27);
             this.numAncho.TabIndex = 1;
             this.numAncho.Value = new decimal(new int[] {
             30,
@@ -329,9 +329,8 @@ namespace AlgoritmosDeDiscretizacion
             this.lblVelValor.AutoSize = true;
             this.lblVelValor.Location = new System.Drawing.Point(475, 80);
             this.lblVelValor.Name = "lblVelValor";
-            this.lblVelValor.Size = new System.Drawing.Size(48, 20);
+            this.lblVelValor.Size = new System.Drawing.Size(0, 20);
             this.lblVelValor.TabIndex = 5;
-            this.lblVelValor.Text = "30ms";
             // 
             // grpExplicacion
             // 

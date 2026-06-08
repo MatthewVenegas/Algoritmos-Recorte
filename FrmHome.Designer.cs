@@ -32,6 +32,9 @@ namespace AlgoritmosDeDiscretizacion
             this.lineasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rellenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorteLineasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recortePoligonosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +46,8 @@ namespace AlgoritmosDeDiscretizacion
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lineasToolStripMenuItem,
             this.circulosToolStripMenuItem,
-            this.rellenoToolStripMenuItem});
+            this.rellenoToolStripMenuItem,
+            this.recorteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1487, 31);
@@ -54,25 +58,49 @@ namespace AlgoritmosDeDiscretizacion
             // 
             this.lineasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lineasToolStripMenuItem.Name = "lineasToolStripMenuItem";
-            this.lineasToolStripMenuItem.Size = new System.Drawing.Size(102, 27);
-            this.lineasToolStripMenuItem.Text = "✏️ Líneas";
+            this.lineasToolStripMenuItem.Size = new System.Drawing.Size(73, 27);
+            this.lineasToolStripMenuItem.Text = "Líneas";
             this.lineasToolStripMenuItem.Click += new System.EventHandler(this.lineasToolStripMenuItem_Click);
             // 
             // circulosToolStripMenuItem
             // 
             this.circulosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.circulosToolStripMenuItem.Name = "circulosToolStripMenuItem";
-            this.circulosToolStripMenuItem.Size = new System.Drawing.Size(108, 27);
-            this.circulosToolStripMenuItem.Text = "⭕ Círculos";
+            this.circulosToolStripMenuItem.Size = new System.Drawing.Size(87, 27);
+            this.circulosToolStripMenuItem.Text = "Círculos";
             this.circulosToolStripMenuItem.Click += new System.EventHandler(this.circulosToolStripMenuItem_Click);
             // 
             // rellenoToolStripMenuItem
             // 
             this.rellenoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.rellenoToolStripMenuItem.Name = "rellenoToolStripMenuItem";
-            this.rellenoToolStripMenuItem.Size = new System.Drawing.Size(184, 27);
-            this.rellenoToolStripMenuItem.Text = "🎨 Relleno (Canvas)";
+            this.rellenoToolStripMenuItem.Size = new System.Drawing.Size(155, 27);
+            this.rellenoToolStripMenuItem.Text = "Relleno (Canvas)";
             this.rellenoToolStripMenuItem.Click += new System.EventHandler(this.rellenoToolStripMenuItem_Click);
+            // 
+            // recorteToolStripMenuItem
+            // 
+            this.recorteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.recorteLineasToolStripMenuItem,
+            this.recortePoligonosToolStripMenuItem});
+            this.recorteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.recorteToolStripMenuItem.Name = "recorteToolStripMenuItem";
+            this.recorteToolStripMenuItem.Size = new System.Drawing.Size(85, 27);
+            this.recorteToolStripMenuItem.Text = "Recorte";
+            // 
+            // recorteLineasToolStripMenuItem
+            // 
+            this.recorteLineasToolStripMenuItem.Name = "recorteLineasToolStripMenuItem";
+            this.recorteLineasToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.recorteLineasToolStripMenuItem.Text = "Recorte de Líneas";
+            this.recorteLineasToolStripMenuItem.Click += new System.EventHandler(this.recorteLineasToolStripMenuItem_Click);
+            // 
+            // recortePoligonosToolStripMenuItem
+            // 
+            this.recortePoligonosToolStripMenuItem.Name = "recortePoligonosToolStripMenuItem";
+            this.recortePoligonosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.recortePoligonosToolStripMenuItem.Text = "Recorte de Polígonos";
+            this.recortePoligonosToolStripMenuItem.Click += new System.EventHandler(this.recortePoligonosToolStripMenuItem_Click);
             // 
             // FrmHome
             // 
@@ -99,5 +127,8 @@ namespace AlgoritmosDeDiscretizacion
         private System.Windows.Forms.ToolStripMenuItem lineasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem circulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rellenoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorteLineasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recortePoligonosToolStripMenuItem;
     }
 }

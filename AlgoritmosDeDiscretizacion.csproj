@@ -52,6 +52,12 @@
     <Compile Include="Algoritmos\Lineas\AlgoritmoBresenhamLinea.cs" />
     <Compile Include="Algoritmos\Lineas\AlgoritmoDDA.cs" />
     <Compile Include="Algoritmos\Lineas\AlgoritmoPuntoMedioLinea.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoCohenSutherland.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoLiangBarsky.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoSutherlandHodgman.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoSubdivisionPuntoMedio.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoWeilerAtherton.cs" />
+    <Compile Include="Algoritmos\Recorte\AlgoritmoCyrusBeckPoligono.cs" />
     <Compile Include="Algoritmos\Relleno\AlgoritmoBoundaryFill.cs" />
     <Compile Include="Algoritmos\Relleno\AlgoritmoFloodFill.cs" />
     <Compile Include="Algoritmos\Relleno\AlgoritmoScanLine.cs" />
@@ -79,6 +85,19 @@
     <Compile Include="FrmPixelEditor.Designer.cs">
       <DependentUpon>FrmPixelEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRecorteLineas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecorteLineas.Designer.cs">
+      <DependentUpon>FrmRecorteLineas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecortePoligonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecortePoligonos.Designer.cs">
+      <DependentUpon>FrmRecortePoligonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\PasoRecorte.cs" />
     <Compile Include="Modelos\PuntoCirculoAlg.cs" />
     <Compile Include="Modelos\PuntoLinea.cs" />
     <Compile Include="Program.cs" />
@@ -95,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPixelEditor.resx">
       <DependentUpon>FrmPixelEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecorteLineas.resx">
+      <DependentUpon>FrmRecorteLineas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecortePoligonos.resx">
+      <DependentUpon>FrmRecortePoligonos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,5 +143,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

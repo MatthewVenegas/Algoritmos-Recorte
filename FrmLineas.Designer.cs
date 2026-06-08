@@ -66,6 +66,7 @@ namespace AlgoritmosDeDiscretizacion
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1480, 52);
             this.panelHeader.TabIndex = 0;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
             // lblTitulo
             // 
@@ -77,6 +78,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblTitulo.Size = new System.Drawing.Size(501, 37);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Algoritmos de Líneas — Rasterización";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // grpAlgoritmo
             // 
@@ -90,6 +92,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpAlgoritmo.TabIndex = 1;
             this.grpAlgoritmo.TabStop = false;
             this.grpAlgoritmo.Text = "Selección de Algoritmo";
+            this.grpAlgoritmo.Enter += new System.EventHandler(this.grpAlgoritmo_Enter);
             // 
             // cmbAlgoritmo
             // 
@@ -121,6 +124,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpPuntoInicial.TabIndex = 2;
             this.grpPuntoInicial.TabStop = false;
             this.grpPuntoInicial.Text = "Punto Inicial (X₀, Y₀)";
+            this.grpPuntoInicial.Enter += new System.EventHandler(this.grpPuntoInicial_Enter);
             // 
             // lblX0
             // 
@@ -132,6 +136,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblX0.Size = new System.Drawing.Size(29, 20);
             this.lblX0.TabIndex = 0;
             this.lblX0.Text = "X₀:";
+            this.lblX0.Click += new System.EventHandler(this.lblX0_Click);
             // 
             // txtX0
             // 
@@ -144,6 +149,7 @@ namespace AlgoritmosDeDiscretizacion
             this.txtX0.Size = new System.Drawing.Size(90, 30);
             this.txtX0.TabIndex = 1;
             this.txtX0.Text = "0";
+            this.txtX0.TextChanged += new System.EventHandler(this.txtX0_TextChanged);
             // 
             // lblY0
             // 
@@ -155,6 +161,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblY0.Size = new System.Drawing.Size(28, 20);
             this.lblY0.TabIndex = 2;
             this.lblY0.Text = "Y₀:";
+            this.lblY0.Click += new System.EventHandler(this.lblY0_Click);
             // 
             // txtY0
             // 
@@ -167,6 +174,7 @@ namespace AlgoritmosDeDiscretizacion
             this.txtY0.Size = new System.Drawing.Size(90, 30);
             this.txtY0.TabIndex = 3;
             this.txtY0.Text = "0";
+            this.txtY0.TextChanged += new System.EventHandler(this.txtY0_TextChanged);
             // 
             // grpPuntoFinal
             // 
@@ -183,6 +191,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpPuntoFinal.TabIndex = 3;
             this.grpPuntoFinal.TabStop = false;
             this.grpPuntoFinal.Text = "Punto Final (X₁, Y₁)";
+            this.grpPuntoFinal.Enter += new System.EventHandler(this.grpPuntoFinal_Enter);
             // 
             // lblX1
             // 
@@ -194,6 +203,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblX1.Size = new System.Drawing.Size(29, 20);
             this.lblX1.TabIndex = 0;
             this.lblX1.Text = "X₁:";
+            this.lblX1.Click += new System.EventHandler(this.lblX1_Click);
             // 
             // txtX1
             // 
@@ -206,6 +216,7 @@ namespace AlgoritmosDeDiscretizacion
             this.txtX1.Size = new System.Drawing.Size(90, 30);
             this.txtX1.TabIndex = 1;
             this.txtX1.Text = "5";
+            this.txtX1.TextChanged += new System.EventHandler(this.txtX1_TextChanged);
             // 
             // lblY1
             // 
@@ -217,6 +228,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblY1.Size = new System.Drawing.Size(28, 20);
             this.lblY1.TabIndex = 2;
             this.lblY1.Text = "Y₁:";
+            this.lblY1.Click += new System.EventHandler(this.lblY1_Click);
             // 
             // txtY1
             // 
@@ -229,6 +241,7 @@ namespace AlgoritmosDeDiscretizacion
             this.txtY1.Size = new System.Drawing.Size(90, 30);
             this.txtY1.TabIndex = 3;
             this.txtY1.Text = "3";
+            this.txtY1.TextChanged += new System.EventHandler(this.txtY1_TextChanged);
             // 
             // grpControles
             // 
@@ -247,6 +260,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpControles.TabIndex = 4;
             this.grpControles.TabStop = false;
             this.grpControles.Text = "Controles";
+            this.grpControles.Enter += new System.EventHandler(this.grpControles_Enter);
             // 
             // btnGraficar
             // 
@@ -303,6 +317,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblVelocidad.Size = new System.Drawing.Size(156, 20);
             this.lblVelocidad.TabIndex = 3;
             this.lblVelocidad.Text = "Velocidad animación:";
+            this.lblVelocidad.Click += new System.EventHandler(this.lblVelocidad_Click);
             // 
             // trkVelocidad
             // 
@@ -323,9 +338,9 @@ namespace AlgoritmosDeDiscretizacion
             this.lblVelValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lblVelValor.Location = new System.Drawing.Point(480, 80);
             this.lblVelValor.Name = "lblVelValor";
-            this.lblVelValor.Size = new System.Drawing.Size(48, 20);
+            this.lblVelValor.Size = new System.Drawing.Size(0, 20);
             this.lblVelValor.TabIndex = 5;
-            this.lblVelValor.Text = "80ms";
+            this.lblVelValor.Click += new System.EventHandler(this.lblVelValor_Click);
             // 
             // grpExplicacion
             // 
@@ -339,6 +354,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpExplicacion.TabIndex = 7;
             this.grpExplicacion.TabStop = false;
             this.grpExplicacion.Text = "Explicación del Algoritmo";
+            this.grpExplicacion.Enter += new System.EventHandler(this.grpExplicacion_Enter);
             // 
             // txtExplicacion
             // 
@@ -353,6 +369,7 @@ namespace AlgoritmosDeDiscretizacion
             this.txtExplicacion.Size = new System.Drawing.Size(532, 170);
             this.txtExplicacion.TabIndex = 0;
             this.txtExplicacion.Text = "";
+            this.txtExplicacion.TextChanged += new System.EventHandler(this.txtExplicacion_TextChanged);
             // 
             // grpTabla
             // 
@@ -366,6 +383,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpTabla.TabIndex = 8;
             this.grpTabla.TabStop = false;
             this.grpTabla.Text = "Tabla de Puntos Generados";
+            this.grpTabla.Enter += new System.EventHandler(this.grpTabla_Enter);
             // 
             // tabla
             // 
@@ -375,6 +393,7 @@ namespace AlgoritmosDeDiscretizacion
             this.tabla.RowHeadersWidth = 35;
             this.tabla.Size = new System.Drawing.Size(532, 110);
             this.tabla.TabIndex = 0;
+            this.tabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_CellContentClick);
             // 
             // lblEcuacion
             // 
@@ -385,6 +404,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblEcuacion.Size = new System.Drawing.Size(548, 24);
             this.lblEcuacion.TabIndex = 5;
             this.lblEcuacion.Text = "Ecuación de la recta: —";
+            this.lblEcuacion.Click += new System.EventHandler(this.lblEcuacion_Click);
             // 
             // lblError
             // 
@@ -394,6 +414,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(548, 20);
             this.lblError.TabIndex = 6;
+            this.lblError.Click += new System.EventHandler(this.lblError_Click);
             // 
             // grpGrafica
             // 
@@ -408,6 +429,7 @@ namespace AlgoritmosDeDiscretizacion
             this.grpGrafica.TabIndex = 9;
             this.grpGrafica.TabStop = false;
             this.grpGrafica.Text = "Gráfica (Plano Cartesiano)";
+            this.grpGrafica.Enter += new System.EventHandler(this.grpGrafica_Enter);
             // 
             // picCanvas
             // 
@@ -430,6 +452,7 @@ namespace AlgoritmosDeDiscretizacion
             this.lblCoordenadas.Size = new System.Drawing.Size(105, 20);
             this.lblCoordenadas.TabIndex = 1;
             this.lblCoordenadas.Text = "Cursor: (—, —)";
+            this.lblCoordenadas.Click += new System.EventHandler(this.lblCoordenadas_Click);
             // 
             // FrmLineas
             // 

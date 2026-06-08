@@ -265,5 +265,125 @@ namespace AlgoritmosDeDiscretizacion
         {
 
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpAlgoritmo_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpPuntoInicial_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblX0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtX0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblY0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtY0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpPuntoFinal_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblX1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtX1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblY1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtY1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpControles_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVelocidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVelValor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpExplicacion_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtExplicacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpTabla_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblEcuacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpGrafica_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblCoordenadas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

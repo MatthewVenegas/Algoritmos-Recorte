@@ -200,5 +200,33 @@ namespace AlgoritmosDeDiscretizacion.Utilidades
             tabla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tabla.GridColor = Color.FromArgb(200, 230, 230);
         }
+
+        // Añadir dentro de GraficadorBase.cs
+        public static void DibujarRegionesRecorte(Graphics g, int xMin, int xMax, int yMin, int yMax, int tamPixel, int anchoCanvas, int altoCanvas)
+        {
+            Point pMin = CartesianoAPantalla(xMin, yMin, anchoCanvas, altoCanvas, tamPixel);
+            Point pMax = CartesianoAPantalla(xMax, yMax, anchoCanvas, altoCanvas, tamPixel);
+
+            using (Pen penRegion = new Pen(Color.FromArgb(100, 0, 150, 150), 2f))
+            {
+                penRegion.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+
+                // Líneas verticales (Izquierda y Derecha)
+                g.DrawLine(penRegion, pMin.X, 0, pMin.X, altoCanvas);
+                g.DrawLine(penRegion, pMax.X, 0, pMax.X, altoCanvas);
+
+                // Líneas horizontales (Arriba y Abajo) - Recuerda que en pantalla la Y está invertida
+                g.DrawLine(penRegion, 0, pMin.Y, anchoCanvas, pMin.Y);
+                g.DrawLine(penRegion, 0, pMax.Y, anchoCanvas, pMax.Y);
+            }
+
+            // Dibujar el rectángulo central (Ventana de Recorte)
+            using (Pen penVentana = new Pen(Color.FromArgb(200, 0, 80, 80), 3f))
+            {
+                int anchoVentana = pMax.X - pMin.X;
+                int altoVentana = pMin.Y - pMax.Y; // pMin.Y está más abajo en pantalla
+                g.DrawRectangle(penVentana, pMin.X, pMax.Y, anchoVentana, altoVentana);
+            }
+        }
     }
 }

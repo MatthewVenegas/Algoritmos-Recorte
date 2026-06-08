@@ -47,5 +47,15 @@ namespace AlgoritmosDeDiscretizacion
         {
 
         }
+
+        private void recorteLineasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm<FrmRecorteLineas>();
+        }
+
+        private void recortePoligonosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm<FrmRecortePoligonos>();
+        }
     }
 }

@@ -296,9 +296,8 @@ namespace AlgoritmosDeDiscretizacion
             this.lblVelValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lblVelValor.Location = new System.Drawing.Point(480, 80);
             this.lblVelValor.Name = "lblVelValor";
-            this.lblVelValor.Size = new System.Drawing.Size(48, 20);
+            this.lblVelValor.Size = new System.Drawing.Size(0, 20);
             this.lblVelValor.TabIndex = 5;
-            this.lblVelValor.Text = "60ms";
             // 
             // grpExplicacion
             // 
